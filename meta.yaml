@@ -1,0 +1,41 @@
+{% set name = "mplstereonet" %}
+{% set version = "0.6.2" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+   git_url : https://github.com/joferkington/mplstereonet
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - matplotlib >=1.1
+    - numpy >=1.1
+    - pip
+    - python
+  run:
+    - matplotlib >=1.1
+    - numpy >=1.1
+    - python
+
+test:
+  imports:
+    - mplstereonet
+
+about:
+  home: "https://github.com/joferkington/mplstereonet/"
+  license: MIT
+  license_family: MIT
+  license_file: 
+  summary: "Stereonets for matplotlib"
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - yohanderose
