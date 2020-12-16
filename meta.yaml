@@ -14,13 +14,14 @@ build:
 
 requirements:
   host:
-    - matplotlib >=1.1
-    - numpy >=1.1
+    - matplotlib
+    - numpy
     - pip
     - python
+    - setuptools
   run:
-    - matplotlib >=1.1
-    - numpy >=1.1
+    - matplotlib
+    - numpy
     - python
 
 test:
